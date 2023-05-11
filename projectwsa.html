@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We Save Animals</title>
+  <link rel="stylesheet" href="projectwsa.css">
+  <script src="Functional.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/contact');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // Contact details successfully stored in the database
+          alert('Contact details stored successfully!');
+          // You can optionally redirect the user to a success page here
+        } else {
+          // Error storing contact details
+          alert('An error occurred while storing the contact details.');
+        }
+      };
+      xhr.send(JSON.stringify({ name: name, email: email, message: message }));
+    });
+  </script>
+  
+
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <div class="container">
+        <a href="#" class="logo">WELCOME TO
+          WE SAVE ANIMALS (WSA) WELFARE TRUST</a>
+        <ul class="navigation">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="container">
+        <h1>Save the Animals, Save the Planet</h1>
+        <p>Join us in our mission to save and protect helpless animals.</p>
+        <a href="#donate" class="cta-button">Donate Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>It started for Praveen in 2013, when he rescued a kitten with a spinal injury. He nursed it at home, but it passed away after a week, leaving Praveen to wonder what he could do to help numerous animals like this, that suffer in silence. So he started by rescuing injured animals, and keeping them at home. Soon, as the number of rescues increased, he started looking for temporary shelters to house them. Eventually, the news of his rescue got around and he started attending to approximately 4-5 cases in a day were People Use to tag him in social media Like Facebook etc. He took the help of Dr. Girish from Blue Cross and Dr. Lohith frm Maruthi pet clinic and started an account in their respective clinics, so that injured animals could be attended to, without a delay due to the finances. So as the number of rescues went up, so did the bill amount in the clinics. But that did not deter Praveen.</p>
+      <p>The word spread, and Praveen, who was initially contacted for rescues only around South Bangalore, started getting calls for help for cases in Mysore, Mandya, Chikmagalur Hosur etc. To manage things better, Praveen started a WhatsApp group With Just 6 People And started attending To this cases full-time. He had no option but to give up his job, financial help was low, but with his family standing behind him, praveen kept doing whatever he could for the animals.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h1>Our Projects</h1>
+      <div class="project">
+        <h2>RESCUE OF INJURED & OLD STRAY ANIMALS</h2>
+        <img src="project1.jpg" alt="Project 1">
+        <h3><p>ANIMAL RESCUING||VACCINATION||STERILIZATION</p></h3>
+      </div>
+      <div class="project">
+        <img src="goat.png" alt="Project 2">
+        <h2>ADOPTION & AWARENESS</h2>
+        <img src="rescue1.png" alt="Project 3">
+        <h3>Active Adoption
+        <p>Take home any of the shelter animals that are put up for adoption . You can get in touch with WSA via phone, email or any other social media .Walk into the centre any day between 10:00 a.m. to 5 p.m. to meet all the wet noses and wagging tails. Trust us, you'd have never seen so much happiness under one roof</p>
+        </h3>
+        <img src="rescue2.png" alt="Project 4">
+        <h2>MEDICAL TREATMENT</h2>
+        <img src="medical.png" alt="Project 5">
+        <h2>REHABILATION CENTER</h2>
+        <img src="REHABILATION.png" alt="Project 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate Section -->
+  <section id="donate">
+    <div class="container">
+      <h2>Donate</h2>
+      <p>Your donation can make a difference in saving the lives of animals.</p>
+      <a href="#" class="donate-button"><h5>TOP HOME</h5></a>
+      <form action="thankyou.html" method="POST">
+        <input type="text" name="donor_name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="number" name="amount" placeholder="Donation Amount" required>
+        <input type="submit" value="Donate Now">
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form method="POST" action="#" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" >
+      </form>
+      <h2>Subscribe Us For Future Updates</h2>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2020. We Save Animals (WSA) Welfare Trust.
+        All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Add a scroll to top button -->
+  <button id="scroll-to-top">Scroll to Top</button>
+  
+  <!-- Add a donation counter element -->
+  <div id="donation-counter">TOTAL DONATION: $0</div>
+
+</body>
+</html>

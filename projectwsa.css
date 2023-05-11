@@ -1,0 +1,205 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3521b555;
+  }
+  Section{
+    background-color: #ee0f0f27;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ee0f0f27;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navigation {
+    list-style: none;
+    text-decoration: underline;
+  }
+  
+  .navigation li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navigation li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px 0;
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* About Section */
+  #about {
+    background-color: #37865134;
+    padding: 50px 0;
+  }
+  
+  #about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Projects Section */
+  #projects {
+    padding: 50px 0;
+  }
+  
+  #projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .project {
+    margin-bottom: 30px;
+  }
+  
+  .project img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .project h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Donate Section */
+  #donate {
+    background-color: #37865134;
+    padding: 50px 0;
+  }
+  
+  #donate h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .donate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 50px 0;
+  }
+  
+  #contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+
+  /* Add styles for the scroll to top button */
+  #scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  #scroll-to-top:hover {
+    background-color: #555;
+  }
+  
+  #scroll-to-top.active {
+    display: block;
+  }
+  /* Add styles for the donation counter */
+  #donation-counter {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5b09e8;
+  }
+  

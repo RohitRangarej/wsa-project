@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animal List</title>
+</head>
+<body>
+  <h1>Animal List</h1>
+  <ul>
+    <% animals.forEach(animal => { %>
+      <li><%= animal.name %> - <%= animal.species %></li>
+    <% }); %>
+  </ul>
+  <h2>Donations</h2>
+  <ul>
+    <% donations.forEach(function(donation) { %>
+      <li>
+        <strong>Donor Name:</strong> <%= donation.donor_name %><br>
+        <strong>Email:</strong> <%= donation.email %><br>
+        <strong>Amount:</strong> <%= donation.amount %><br>
+        <strong>Date:</strong> <%= donation.donation_date %>
+      </li>
+    <% }); %>
+  </ul>
+
+  <h2>Contacts</h2>
+  <ul>
+    <% contacts.forEach(function(contact) { %>
+      <li>
+        <strong>Name:</strong> <%= contact.name %><br>
+        <strong>Email:</strong> <%= contact.email %><br>
+        <strong>Message:</strong> <%= contact.message %><br>
+        <strong>Date:</strong> <%= contact.created_at %>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
